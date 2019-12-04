@@ -5,7 +5,7 @@ var type = '';
 var use_type = 0;
 
 function img_click(img_no,img_use){
-        url = '/test/'+img_no;
+        url = '/img/'+img_no;
 		if(img_use == 0){
 			use_type = 1;
 		}else{
@@ -31,14 +31,17 @@ function img_click(img_no,img_use){
     selectElement.addEventListener('change', (event) => {
       var selected_person = event.target.value;
 
-           url = '/test/person/'+selected_person;
+           url = '/person/'+selected_person;
       		var data = {
       			"person_nm" : selected_person
       	  		};
         $.ajax({
         			url : url,
-        			type : "POST",
-        			data : data
+        			type : "GET",
+        			data : data,
+        			contentType: 'application/json',
+        			success: function(){
+                        window.location.href = 'http://localhost:8080/person/'+data.person_nm;
+                    }
         		})
-		location.reload();
     });

@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
             var box = document.createElement('div');
             box.className = 'wf-box';
             var image = document.createElement('img');
-            image.src = "../initImage.png";
+            image.src = "/resources/img/initImage.png";
             box.appendChild(image);
             var content = document.createElement('div');
             return box;
