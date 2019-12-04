@@ -3,7 +3,7 @@ package com.sweetk.ImgDivider.domain;
 import java.util.Date;
 
 public class ImgDividerDomain {
-    private int image_no;
+    private int img_no;
     private String person_nm;
     private String link;
     private String hash;
@@ -11,14 +11,14 @@ public class ImgDividerDomain {
     private String face_box;
     private String img_path;
     private int folder_no;
-    private boolean img_use;
+    private int is_use;
 
-    public boolean isImg_use() {
-        return img_use;
+    public int getIs_use() {
+        return is_use;
     }
 
-    public void setImg_use(boolean img_use) {
-        this.img_use = img_use;
+    public void setIs_use(int is_use) {
+        this.is_use = is_use;
     }
 
     public int getFolder_no() {
@@ -77,11 +77,11 @@ public class ImgDividerDomain {
         this.person_nm = person_nm;
     }
 
-    public int getImage_no() {
-        return image_no;
+    public int getImg_no() {
+        return img_no;
     }
 
-    public void setImage_no(int image_no) {
-        this.image_no = image_no;
+    public void setImg_no(int img_no) {
+        this.img_no = img_no;
     }
 }

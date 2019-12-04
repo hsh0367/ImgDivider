@@ -27,6 +27,11 @@ public class ImgDividerServiceImpl implements ImgDividerService {
     }
 
     @Override
+    public List<ImgDividerDomain> findPerson_nm() {
+        return imgDividerMapper.findPerson_nm();
+    }
+
+    @Override
     public ImgDividerDomain findByImg_no(int img_no) {
         return imgDividerMapper.findByImg_no(img_no);
     }

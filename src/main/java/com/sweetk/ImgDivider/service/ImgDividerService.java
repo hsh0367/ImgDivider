@@ -8,6 +8,7 @@ import java.util.List;
 public interface ImgDividerService {
     public List<ImgDividerDomain> findAll();
     public List<ImgDividerDomain> findByPerson_nm(String person_nm);
+    public List<ImgDividerDomain> findPerson_nm();
     public ImgDividerDomain findByImg_no(int img_no);
     public void updateImg_no(ImgDividerDomain ImgDividerDomain);
 }

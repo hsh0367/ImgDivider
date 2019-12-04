@@ -20,6 +20,9 @@ public interface ImgDividerMapper {
     @Select("SELECT * FROM img WHERE img_no = #{img_no}")
     public ImgDividerDomain findByImg_no(@Param("img_no") int img_no);
 
+    @Select("SELECT DISTINCT person_nm FROM img")
+    public List<ImgDividerDomain> findPerson_nm();
+
     @Update("UPDATE img SET is_use=#{is_use} where img_no=#{img_no}")
     public void updateImg_no(ImgDividerDomain domain);
 }
