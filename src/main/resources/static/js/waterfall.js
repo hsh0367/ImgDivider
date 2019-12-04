@@ -3,11 +3,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
     var waterfall = new Waterfall({ minBoxWidth: 100 });
 
     // button click handle
-    var btn = document.getElementById('add-btn');
-    var boxHandle = newNode();
-    btn.addEventListener('click', function() {
-        waterfall.addBox(boxHandle());
-    });
+
 
     var scaleUpbtn = document.getElementById('scaleup-btn');
     scaleUpbtn.addEventListener('click', function() {
@@ -39,18 +35,5 @@ window.addEventListener('DOMContentLoaded', function(e) {
 
             return elemHeight < screenHeight;
         }
-    }
-
-    function newNode() {
-        return function() {
-
-            var box = document.createElement('div');
-            box.className = 'wf-box';
-            var image = document.createElement('img');
-            image.src = "/resources/img/initImage.png";
-            box.appendChild(image);
-            var content = document.createElement('div');
-            return box;
-        };
     }
 });
